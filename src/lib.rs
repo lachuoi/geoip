@@ -10,8 +10,7 @@ use std::str::FromStr;
 /// A simple Spin HTTP component.
 #[http_component]
 async fn handle_root(req: Request) -> Result<impl IntoResponse> {
-    let reader =
-        maxminddb::Reader::open_readfile("GeoLite2-City.mmdb").unwrap();
+    let reader = maxminddb::Reader::open_readfile("GeoLite2-City.mmdb").unwrap();
 
     let query = req.query();
 

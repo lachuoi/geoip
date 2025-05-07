@@ -1,3 +1,5 @@
+export RUST_LOG := "spin-trace"
+
 # Set the default recipe
 default:
     just test
